@@ -1,7 +1,7 @@
 var weather;
 function setup()
 {
-	createCanvas("100%","100%");
+	createCanvas(500,500);
 	loadJSON("api.openweathermap.org/data/2.5/forecast?q=Houston&APPID=1af755e1dccfae12d193c56c18b8f9bf",gotData);
 }
 
@@ -15,6 +15,6 @@ function draw()
 	background(0);
 	if (weather)
 	{
-		ellipse(100,100,weather.main.temp,weather.main.temp);
+		ellipse(250,250,weather.main.temp,weather.main.temp);
 	}
 }
