@@ -34,7 +34,8 @@ body {
 .button.cyan{
 	margin: 0 3vw;
  	border-bottom: 1vw solid #1ebacc;
-	color: #1ebacc;
+ 	background-color: #1ebacc;
+ 	color: #1ebacc;
 }
 
 .not-selected{
