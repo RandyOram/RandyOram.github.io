@@ -7,7 +7,7 @@ function main()
 	    xhttp.setRequestHeader("Content-type", "application/json");
 	    xhttp.send();
 	    var response = JSON.parse(xhttp.responseText);
-
+	    alert('testing');
 	    draw(response);
 	});
 }
