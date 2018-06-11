@@ -7,14 +7,15 @@ function setup()
 
 function gotData(data)
 {
-	weather = data;
+	println(data);
+	//weather = data;
 }
 
-function draw()
-{
-	background(0);
-	if (weather)
-	{
-		ellipse(250,250,weather.main.temp,weather.main.temp);
-	}
-}
+// function draw()
+// {
+// 	background(0);
+// 	if (weather)
+// 	{
+// 		ellipse(250,250,weather.main.temp,weather.main.temp);
+// 	}
+// }
