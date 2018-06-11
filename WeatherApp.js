@@ -2,7 +2,7 @@ var weather;
 function setup()
 {
 	createCanvas(500,500,"black");
-	loadJSON("api.openweathermap.org/data/2.5/forecast?q=Houston&APPID=1af755e1dccfae12d193c56c18b8f9bf",gotData());
+	loadJSON("api.openweathermap.org/data/2.5/forecast?q=Houston&APPID=1af755e1dccfae12d193c56c18b8f9bf",gotData);
 }
 
 function gotData(data)
@@ -18,6 +18,8 @@ function createCanvas(width, height, color) {
     c.setAttribute('background-color',color);
     return c;
 }
+
+$(document).ready(setup);
 
 // function draw()
 // {
