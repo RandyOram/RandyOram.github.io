@@ -19,11 +19,6 @@ body {
 	color: white;
 }
 
-.cyan {
-  background-color: #1ebacc;
-  color: #1ebacc;
-}
-
 .button {
 	display: flex;
 	align-items: center;
@@ -34,15 +29,4 @@ body {
 	font-size: 2.65vw;
 	font-weight: bold;
 	letter-spacing: 0.2em;
-}
-
-.button.cyan
-{
-	margin: 0 3vw;
- 	border-bottom: 1vw solid #1ebacc;
-}
-
-.not-selected{
-  color: #2D2D2D;
-  border-bottom: 1vw solid #2D2D2D !important;
 }
