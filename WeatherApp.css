@@ -31,8 +31,13 @@ body {
 	letter-spacing: 0.2em;
 }
 
-.button.cyan
-{
+.button.cyan{
 	margin: 0 3vw;
  	border-bottom: 1vw solid #1ebacc;
+	color: #1ebacc;
+}
+
+.not-selected{
+	color: #2D2D2D;
+  	border-bottom: 1vw solid #2D2D2D !important;
 }
