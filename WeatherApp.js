@@ -1,31 +1,18 @@
-var weather;
-function setup()
+function main()
 {
-	createCanvas(500,500,"black");
-	loadJSON("api.openweathermap.org/data/2.5/forecast?q=Houston&APPID=1af755e1dccfae12d193c56c18b8f9bf",gotData);
+	$('.button').on('click',function()
+	{
+	    var xhttp = new XMLHttpRequest();
+	    xhttp.open("POST", "https://api.darksky.net/forecast/fb2905b05b877d0a1983b5c982316c88/30.1658,-95.4613", true);
+	    xhttp.setRequestHeader("Content-type", "application/json");
+	    xhttp.send();
+	    var response = JSON.parse(xhttp.responseText);
+
+	    draw(response);
+	});
 }
 
-function gotData(data)
+function draw(response)
 {
-	println(data);
-	//weather = data;
+	println(response);
 }
-
-function createCanvas(width, height, color) {
-    var c = document.createElement('canvas');
-    c.setAttribute('width', width);
-    c.setAttribute('height', height);
-    c.setAttribute('background-color',color);
-    return c;
-}
-
-$(document).ready(setup);
-
-// function draw()
-// {
-// 	background(0);
-// 	if (weather)
-// 	{
-// 		ellipse(250,250,weather.main.temp,weather.main.temp);
-// 	}
-// }
