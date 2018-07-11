@@ -1,0 +1,51 @@
+body {
+	
+}
+
+
+table {
+	width: 400px;
+	height: 400px;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Fresca';
+  font-size: 100px;
+}
+
+tr {
+	height:33.3%;
+	max-height:33.3%;
+}
+
+td {
+	width: 33.3%;
+	height: 33.3%;
+  	border: 6px solid #222;
+}
+td:first-of-type {
+  	border-left-color: transparent;
+  	border-top-color: transparent;
+}
+td:nth-of-type(2) {
+  	border-top-color: transparent;
+}
+td:nth-of-type(3) {
+  	border-right-color: transparent;
+  	border-top-color: transparent;
+}
+tr:nth-of-type(3) td {
+  	border-bottom-color: transparent;
+}
+
+.center {
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td:hover {
+	background-color: #f4ce42;
+}
+
