@@ -1,5 +1,6 @@
-function triggerConfetti()
+function triggerConfetti(xPos, yPos)
 {
+	let decelerate = 1;
 	let canvas = document.getElementById('confetti');
 
 	var dimension = [document.documentElement.clientWidth, document.documentElement.clientHeight];
@@ -30,7 +31,9 @@ function triggerConfetti()
 				continue;
 			}
 
-			currPiece.y += currPiece.gravity * dt;
+
+			currPiece.x += (currPiece.xVelocity);
+			currPiece.y += (currPiece.yVelocity + currPiece.gravity * dt);
 			currPiece.rotation += currPiece.rotationSpeed;
 		}
 		setTimeout(update, 1);
@@ -59,7 +62,9 @@ function triggerConfetti()
 		this.x = x;
 		this.y = y;
 		this.size = (Math.random()*0.5 + 0.75)* 10;
-		this.gravity = (Math.random()*0.5 + 0.75)* 0.001;
+		this.xVelocity = (Math.random() < 0.5 ? -2 : 2) * (Math.random() * 10) * 0.1;
+		this.yVelocity = (Math.random() < 0.9 ? -2 : 0.1) * (Math.random() * 10) * 0.1;
+		this.gravity = (Math.random()*0.5 + 0.75) * 0.001;
 		this.rotation = (Math.PI * 2) * Math.random();
 		this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.005;
 		this.color = getRandomColor();
@@ -67,7 +72,7 @@ function triggerConfetti()
 
 	while (pieces.length < numPieces)
 	{
-		pieces.push(new piece(Math.random()*canvas.width,0));
+		pieces.push(new piece(xPos,yPos));
 	}
 
 	update();
