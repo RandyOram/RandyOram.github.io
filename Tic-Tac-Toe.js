@@ -1,13 +1,8 @@
-//TODO: Add title
-//TODO: Add turn indicator
-//TODO: Add restart button
-
 var gameBoard = [0,0,0,0,0,0,0,0,0];
 var isGameOver = false;
 
 function main()
 {
-	$("body").hide().fadeIn(1000);
 	$('.button').hide();
 	let mouseCoords = [];
 	var player1 = "X";
@@ -48,9 +43,7 @@ function main()
 				{
 					$('#gameinfo span').text('X wins!');
 				}
-				$('.button').fadeIn(2500);
 				triggerConfetti(event.clientX,event.clientY);
-				//TODO: Add winner text
 			}
 		}
 		else
