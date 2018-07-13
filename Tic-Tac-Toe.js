@@ -3,37 +3,66 @@
 //TODO: Add restart button
 
 var gameBoard = [0,0,0,0,0,0,0,0,0];
+var isGameOver = false;
 
 function main()
 {
+	$("body").hide().fadeIn(1000);
+	$('.button').hide();
+	let mouseCoords = [];
 	var player1 = "X";
 	var player2 = "O";
 	var currentTurn = 1;
 	var movesMade = 0;
-	$('td').on('click',function()
+	$('td').on('click',function(event)
 	{
-		++movesMade;
-
-		if ( currentTurn === 1 )
+		if (!isGameOver)
 		{
-			event.target.innerHTML = player1;
-			event.target.style.color = "red";
-			updateBoard(parseInt(event.target.id),player1.charCodeAt(0));
-			++currentTurn;
+			++movesMade;
+
+			if ( currentTurn === 1 )
+			{
+				event.target.innerHTML = player1;
+				event.target.style.color = "red";
+				updateBoard(parseInt(event.target.id),player1.charCodeAt(0));
+				++currentTurn;
+				$('#gameinfo span').text('O\'s turn!');
+			}
+			else
+			{
+				event.target.innerHTML = player2;
+				event.target.style.color = "blue";
+				updateBoard(parseInt(event.target.id),player2.charCodeAt(0));
+				--currentTurn;
+				$('#gameinfo span').text('X\'s turn!');
+			}
+
+			isGameOver = checkWinCondition();
+			if (isGameOver)
+			{
+				if (movesMade % 2 === 0)
+				{
+					$('#gameinfo span').text('O wins!');
+				}
+				else
+				{
+					$('#gameinfo span').text('X wins!');
+				}
+				$('.button').fadeIn(2500);
+				triggerConfetti(event.clientX,event.clientY);
+				//TODO: Add winner text
+			}
 		}
 		else
 		{
-			event.target.innerHTML = player2;
-			event.target.style.color = "blue";
-			updateBoard(parseInt(event.target.id),player2.charCodeAt(0));
-			--currentTurn;
+			document.addEventListener('click',triggerConfetti(event.clientX,event.clientY));
 		}
-		if (checkWinCondition())
-		{
-			//TODO: LOCK BOARD
-			//TODO: Add winner text
-			//TODO: Add confetti?!
-		}
+		
+	});
+
+	$('.button').on('click',function()
+	{
+		window.location.reload();
 	});
 
 	function checkWinCondition()
@@ -138,5 +167,4 @@ function main()
 		gameBoard[position] = player;
 	}
 }
-
 $(document).ready(main);
