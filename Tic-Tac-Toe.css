@@ -2,6 +2,37 @@ body {
 	
 }
 
+.title {
+  position: absolute;
+  font-size: 30px;
+  top: 7%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  font-family: 'Gaegu';
+}
+
+.subtitle {
+  position: absolute;
+  font-size: 50px;
+  bottom: 15%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  font-family: 'Gaegu';
+}
+
+.button {
+  position: absolute;
+  font-size: 50px;
+  bottom: 4%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Gaegu';
+}
 
 table {
 	width: 400px;
@@ -44,8 +75,3 @@ tr:nth-of-type(3) td {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-td:hover {
-	background-color: #f4ce42;
-}
-
