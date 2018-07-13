@@ -43,6 +43,7 @@ function main()
 				{
 					$('#gameinfo span').text('X wins!');
 				}
+				$('.button').fadeIn(50);
 				triggerConfetti(event.clientX,event.clientY);
 			}
 		}
