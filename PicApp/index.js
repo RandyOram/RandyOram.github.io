@@ -18,6 +18,46 @@ for (var i = 0; i < inputs.length; i++) {
     inputs[i].onclick = switchLayer;
 }
 
+async function loadmap()
+{
+  let result = await fetch('https://api.myjson.com/bins/11mbw0');
+  let geojson = await(result.json());
+  return geojson;
+}
+
+// var geojson;
+// loadmap().then(result => {
+//   geojson = result;
+//   //console.log(geojson.users[0].photos[0].coordinates);
+
+//   geojson.users.forEach(function(user)
+//   {
+//     user.photos.forEach(function(photo)
+//     {
+//       console.log(photo.coordinates);
+//       // create a HTML element for each feature
+//       var el = document.createElement('div');
+//       el.className = 'marker';
+
+//       new mapboxgl.Marker(el)
+//       .setLngLat(photo.coordinates)
+//       .addTo(map);
+//     });
+
+
+
+//     // make a marker for each feature and add to the map
+//     // new mapboxgl.Marker(el)
+//     // .setLngLat(marker.geometry.coordinates)
+//     // .addTo(map);
+//   });
+// });
+
+
+
+var geojson = loadmap();
+console.log(geojson);
+
 var geojson = {
   type: 'FeatureCollection',
   features: [{
