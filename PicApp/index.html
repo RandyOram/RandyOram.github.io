@@ -4,8 +4,9 @@
       <meta charset='utf-8' />
       <title>PicApp</title>
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
-      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+      <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+      <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+      <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
       <link rel="stylesheet" type="text/css" href="./index.css">
       <style>
           body { margin:0; padding:0; }
@@ -16,7 +17,7 @@
   <body>
     <div id='map'></div>
     <div id='menu'>
-        <input id='basic' type='radio' name='rtoggle' value='basic' checked='checked'>
+        <input id='basic' type='radio' name='rtoggle' value='basic'>
         <label for='basic'>basic</label>
         <input id='streets' type='radio' name='rtoggle' value='streets'>
         <label for='streets'>streets</label>
@@ -26,10 +27,12 @@
         <label for='light'>light</label>
         <input id='dark' type='radio' name='rtoggle' value='dark'>
         <label for='dark'>dark</label>
-        <input id='satellite' type='radio' name='rtoggle' value='satellite'>
+        <input id='satellite' type='radio' name='rtoggle' value='satellite' checked='checked'>
         <label for='satellite'>satellite</label>
     </div>
   </body>
 </html>
 <script src="./index.js"></script>
+
+
 
