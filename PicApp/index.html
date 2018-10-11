@@ -7,32 +7,34 @@
       <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
       <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
       <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="./index.css">
       <style>
           body { margin:0; padding:0; }
-          #map { position:absolute; top:0; bottom:0; width:100%; }
+          #map { position:absolute; top:50px; bottom:0; width:100%; }
       </style>
   </head>
 
   <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">PicMap</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+</ul>
+      </div>
+    </nav>
+
     <div id='map'></div>
-    <div id='menu'>
-        <input id='basic' type='radio' name='rtoggle' value='basic'>
-        <label for='basic'>basic</label>
-        <input id='streets' type='radio' name='rtoggle' value='streets'>
-        <label for='streets'>streets</label>
-        <input id='bright' type='radio' name='rtoggle' value='bright'>
-        <label for='bright'>bright</label>
-        <input id='light' type='radio' name='rtoggle' value='light'>
-        <label for='light'>light</label>
-        <input id='dark' type='radio' name='rtoggle' value='dark'>
-        <label for='dark'>dark</label>
-        <input id='satellite' type='radio' name='rtoggle' value='satellite' checked='checked'>
-        <label for='satellite'>satellite</label>
-    </div>
   </body>
 </html>
 <script src="./index.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
-
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
