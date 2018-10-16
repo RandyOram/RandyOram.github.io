@@ -13,19 +13,21 @@
           body { margin:0; padding:0; }
           #map { position:absolute; top:50px; bottom:0; width:100%; }
       </style>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
 
   <body>
-
+    <meta name="google-signin-client_id" content="27655531075-disg3jcbjnpm67k6neaun9qun5rqhasu.apps.googleusercontent.com">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">PicMap</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-</ul>
+          <li>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          </li>
+        </ul>
       </div>
     </nav>
 

@@ -13,16 +13,16 @@ var map = L.mapbox.map('map', 'mapbox.dark');
 
 
 
-map.on('load', () => {
-  loadmap().then(result => {
-    geojson = result;
-    geojson.users.forEach(function(user)
-    {
-      user.photos.forEach(function(photo)
-      {
-        L.marker(photo.coordinates).bindPopup(`<img src=${photo.url} alt="" height="84" width="84">`).addTo(map);
+// map.on('load', () => {
+//   loadmap().then(result => {
+//     geojson = result;
+//     geojson.users.forEach(function(user)
+//     {
+//       user.photos.forEach(function(photo)
+//       {
+//         L.marker(photo.coordinates).bindPopup(`<img src=${photo.url} alt="" height="84" width="84">`).addTo(map);
 
-      });
-    });
-  });
-});
+//       });
+//     });
+//   });
+// });
