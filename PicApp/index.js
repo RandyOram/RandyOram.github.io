@@ -30,6 +30,8 @@ function processRequest(response_text) {
     imageLink = json.data.link;
     console.log(imageLink);
     
+    let marker = L.marker([50, 50]).bindPopup(`<img src=${imageLink} alt="" height="84" width="84">`);
+    marker.addTo(map);
     
   }
 }
