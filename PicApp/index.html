@@ -14,7 +14,6 @@
           body { margin:0; padding:0; }
           #map { position:absolute; top:50px; bottom:0; width:100%; }
       </style>
-      <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
 
   <body>
@@ -26,7 +25,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
           </li>
           <li><a>
             <div class="custom-file">
@@ -39,6 +38,7 @@
     </nav>
 
     <div id='map'></div>
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>
 <script src="./index.js"></script>
