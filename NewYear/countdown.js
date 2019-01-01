@@ -34,9 +34,9 @@ function date_time(id)
     var currTimeMS = date.getTime();
     var currTimeSec = 1000 * Math.trunc(currTimeMS / 1000);
     var secondsRemaining = ((newYearDate.getTime() - currTimeSec) / 1000);
-
-    /* */
-    if ((date.getDay() === 0) && (date.getDay() === 0))
+    
+    /* Checks if it's already January of the new year! */
+    if ((date.getMonth() === 0) && (date.getDate() === 1))
     {
         newYear = true;
     }
@@ -44,6 +44,7 @@ function date_time(id)
     /* Check if it's the new year! */
     if (newYear || (!newYear && (date.toString() === newYearDate.toString())))
     {
+        console.log("Hello");
         newYear = true;
         document.getElementById('countdown').innerHTML = 'Happy New Year!';
         document.getElementById(id).innerHTML = result;
@@ -65,6 +66,7 @@ function date_time(id)
         newYear = false;
     }
 
+    /* Run it every second! */
     setTimeout('date_time("'+id+'");','1000');
     return true;
 }
