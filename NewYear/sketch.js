@@ -1,5 +1,9 @@
 var fireworks = [];
 var gravity;
+var fireworkProb;
+var yearCheck = 2019;
+var count = 0;
+var currDate = new Date;
 
 function setup()
 {
@@ -20,11 +24,27 @@ function setup()
 
 function draw()
 {
+    if (currDate.getMonth() === 1 && count === 0)
+    {
+        ++count;
+        ++year;
+    }
+
+    if (currDate.getFullYear() != yearCheck)
+    {
+        fireworkProb = 0;
+    }
+    else
+    {
+        --count;
+        fireworkProb = 0.025;
+    }
+
     background(0,25);
 
     /* Prevent this from running with a conditional */
 
-    if (random(1) < 0.025) {
+    if (random(1) < fireworkProb) {
         fireworks.push(new Firework());
     }
     
