@@ -44,11 +44,8 @@ function date_time(id)
     /* Check if it's the new year! */
     if (newYear || (!newYear && (date.toString() === newYearDate.toString())))
     {
-        console.log("Hello");
         newYear = true;
         document.getElementById('countdown').innerHTML = 'Happy New Year!';
-        document.getElementById(id).innerHTML = result;
-        return true;
     }
 
     /* Update the timer */
