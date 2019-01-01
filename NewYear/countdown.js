@@ -1,27 +1,3 @@
-// var offset = new Date().getTimezoneOffset();
-// console.log(offset);
-
-// var newYearDate = new Date(2019, 0, 1, 0, 0, 0, 0);
-// var currDate;
-// var isNewYear = false;
-// /* Adjusts timer */
-// function countdown() {
-//     // must calculate number of seconds between now and new year
-//     currDate = new Date();
-//     //document.getElementById("countdown-container").innerHTML = (newYearDate.getHours().toString() + " " + newYearDate.getMinutes().toString() + " " + newYearDate.getSeconds().toString());
-//     setInterval(function() { 
-//         document.getElementById("countdown-container").innerHTML = (currDate.toDateString() + " " + currDate.toTimeString());
-//     }, 1000);
-    
-// }
-
-// /* Remove the timer and trigger the fireworks */
-// function removeTimer() {
-    
-// }
-
-// countdown();
-
 var newYearDate = new Date(2019, 0, 1, 0, 0, 0, 0);
 
 var newYear = false;
