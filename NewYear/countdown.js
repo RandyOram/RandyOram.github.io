@@ -38,12 +38,14 @@ function date_time(id)
     /* Checks if it's already January of the new year! */
     if ((date.getMonth() === 0) && (date.getDate() === 1))
     {
+        console.log("Orange!");
         newYear = true;
     }
 
     /* Check if it's the new year! */
     if (newYear || (!newYear && (date.toString() === newYearDate.toString())))
     {
+        console.log("Blue!");
         newYear = true;
         document.getElementById('countdown').innerHTML = 'Happy New Year!';
     }
