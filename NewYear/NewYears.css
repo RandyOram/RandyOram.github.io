@@ -21,8 +21,8 @@ p {
 }
 
 #countdown-container {
-    width: 50%;
-    height: 15%;
+    width: 90%;
+    height: 20%;
 
     position: absolute;
     top:0;
@@ -45,7 +45,7 @@ p {
     height: 15%;
 
     position: absolute;
-    top:25%;
+    top:40%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -58,4 +58,14 @@ p {
     font-size: 50px;
     color: white;
     font-family: 'Lobster';
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
 }
