@@ -38,16 +38,17 @@ function date_time(id)
     /* Checks if it's already January of the new year! */
     if ((date.getMonth() === 0) && (date.getDate() === 1))
     {
-        console.log("Orange!");
         newYear = true;
     }
 
     /* Check if it's the new year! */
     if (newYear || (!newYear && (date.toString() === newYearDate.toString())))
     {
-        console.log("Blue!");
         newYear = true;
         document.getElementById('countdown').innerHTML = 'Happy New Year!';
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
     }
 
     /* Update the timer */
@@ -60,7 +61,7 @@ function date_time(id)
     }
 
     /* Reset new year */
-    if ( (date.getDay() > 0) && (date.getMonth() > 0) )
+    if ( (date.getDate() > 0) && (date.getMonth() > 0) )
     {
         newYear = false;
     }
