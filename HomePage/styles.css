@@ -6,6 +6,10 @@ body {
     overflow: hidden;
 }
 
+.col-sm-6 {
+    width: 50% !important;
+}
+
 p {
     font-family: 'Exo 2' !important;
     text-align: justify;
