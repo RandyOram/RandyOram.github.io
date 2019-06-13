@@ -74,8 +74,8 @@ p {
 }
 
 #navButton {
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #prof-pic {
@@ -83,14 +83,14 @@ p {
     height: 8rem;
 }
 
-#title-text {
+/* #title-text {
     text-shadow: 3px 3px 3px 3px #a9adb3;
     margin: 2rem;
     color: #FFFAFA;
     mix-blend-mode: difference;
     font: 999 13vmin/13vh 'Exo 2';
     text-align: center;
-}
+} */
 
 #name-text {
     font: 900 6vmin/6vh 'Exo 2';
@@ -111,10 +111,10 @@ p {
     font-family: 'Exo 2' !important;
 }
 
-.test {
+/* .test {
     border: 1px solid gray;
     width: 10rem;
-}
+} */
 
 .btn-circle:hover {
     transform: scale(1.1);
@@ -138,7 +138,7 @@ p {
 }
 
 #button-row {
-    margin:20px;
+    margin:1rem;
 }
 
 #back-btn-row {
