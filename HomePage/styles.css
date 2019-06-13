@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+p {
+    font-family: 'Exo 2' !important;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.card-body: {
+    max-height: 95vh;
+}
+
+#about-info {
+    max-height: 25vh;
+    overflow: scroll;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* background-color: #ff7f16; */
+    /* background-color: #ff8900; */
+    background: linear-gradient(45deg, #f08f20, #ff8900);
+    /* background: linear-gradient(45deg, rgb(241, 118, 102), #FF7361); */
+}
+  
+.body-particles{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    /* top: 25vh;
+    left: 30vw; */
+    z-index: 100;
+}
+
+/* #particles-js {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: linear-gradient(45deg, #e91e63, #ff8900);
+} */
+
+/* .case {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 350px;
+    margin-bottom: auto;
+} */
+
+.card {
+    border-radius: 0.5rem!important;
+    min-width: 35vw;
+    max-width: 50vw;
+}
+
+.actualNavButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navButton {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#prof-pic {
+    width: 8rem;
+    height: 8rem;
+}
+
+#title-text {
+    text-shadow: 3px 3px 3px 3px #a9adb3;
+    margin: 2rem;
+    color: #FFFAFA;
+    mix-blend-mode: difference;
+    font: 999 13vmin/13vh 'Exo 2';
+    text-align: center;
+}
+
+#name-text {
+    font: 900 6vmin/6vh 'Exo 2';
+    text-align: center;
+}
+
+#card-text {
+    font: 50 4vmin/4vh 'Exo 2';
+    text-align: center;
+}
+
+#contact-text {
+    font: 50 3vmin/3vh 'Exo 2';
+    text-align: center;
+}
+
+.special-text {
+    font-family: 'Exo 2' !important;
+}
+
+.test {
+    border: 1px solid gray;
+    width: 10rem;
+}
+
+.btn-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px #a9adb3; 
+}
+
+.btn-circle {
+    transition: all .2s ease-in-out;
+    border: solid #a9adb3 !important;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50% !important;
+}
+
+.btn-float {
+    /* box-shadow: 0px 0px 3px 3px #a9adb3; */
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#button-row {
+    margin:20px;
+}
+
+#back-btn-row {
+    margin: 50px 20px 50px 20px;
+}
+
+.expandedHeight {
+    height: 80vh;
+}
+
+/* .collapsing {
+    -moz-transition : height 0.25s width 0.25s;
+    -webkit-transition : height 0.25s width 0.25s;
+    -o-transition : height 0.25s width 0.25s;
+    transition : height 0.25s width 0.25s;
+} */
+
+#tic-tac-toe {
+    background-image: url("tic-tac-toe.png");
+    background-size: contain;
+}
+
+#lite-brite {
+    background-image: url("lite-brite.png");
+    background-size: contain;
+}
+
+#new-years {
+    background-image: url("new-years.png");
+    background-size: contain;
+}
+
+#pic-map {
+    background-image: url("pic-map.png");
+    background-size: contain;
+}
+
+.box {
+    transition: all .2s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 5%;
+    border: solid #a9adb3 !important;
+}
+
+.box:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 0px #a9adb3; 
+}
+
+.box:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.modal-content {
+    border: solid #fff !important;
+}
+
+/* .modal-content {
+    left: 50%;
+    max-width: 80vw;
+    width: 100%;
+    height: 100%;
+} */
