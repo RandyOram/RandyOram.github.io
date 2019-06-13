@@ -67,13 +67,16 @@ p {
     max-width: 50vw;
 }
 
-.actualNavButton {
+/* .actualNavButton {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 #navButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
