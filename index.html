@@ -31,7 +31,7 @@
                                 <h3 class="card-title" id="card-text">Software Engineer</h3>
                             </div>
                             <div class="collapse justify-content-center row" id="about-info">
-                                <p>Randy is a software engineer at ExxonMobil. He’s developed strong web-development, Java development, and user-experience design skills, but is interested in diving into the world of artificial intelligence and machine learning going forward. In college, he became passionate for the field of anthropology, and is constantly looking for new and creative ways to tie that in with his computer science background. In his spare time, Randy enjoys cheering on the Gators, hiking new trails, and learning to cook!</p>
+                                <p>Randy is a software engineer at ExxonMobil. He’s developed strong cloud, Java development, and user-experience design skills, but is interested in diving into the world of data analytics going forward. In college, he became passionate for the field of anthropology, and is constantly looking for new and creative ways to tie that in with his computer science background. In his spare time, Randy enjoys cheering on the Gators, hiking new trails, and learning to cook!</p>
                             </div>
                             <div class="justify-content-center row" id="button-row">
                                 <div class="col-xs-6 col-sm-6 col-md-3" id="navButton">
@@ -124,6 +124,11 @@
 
                             </div>
                         </div>
+                        <div class="col-xs-3 col-sm-4 col-md-3">
+                            <div class="box" id="pong" data-toggle="tooltip" title="Pong" data-placement="bottom">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,6 +177,10 @@
             $('#pic-map').click(function(e) {
                 e.preventDefault();  //stop the browser from following
                 window.location.href = 'http://pic-app-client.herokuapp.com/#/';
+            });
+            $('#pong').click(function(e) {
+                e.preventDefault();  //stop the browser from following
+                window.location.href = './Pong/index.html';
             });
         </script>
     </body>
