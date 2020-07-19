@@ -6,7 +6,7 @@ let myFont;
 var firstRound = true;
 
 function preload() {
-    myFont = loadFont("/PressStart2p.ttf");
+    myFont = loadFont("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 }
 
 function setup() {
