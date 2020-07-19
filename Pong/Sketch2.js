@@ -6,7 +6,7 @@ let myFont;
 var firstRound = true;
 
 function preload() {
-    myFont = loadFont("data/PressStart2p.ttf");
+    myFont = loadFont("./data/PressStart2p.ttf");
 }
 
 function setup() {
