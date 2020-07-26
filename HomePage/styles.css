@@ -179,6 +179,11 @@ p {
     background-size: contain;
 }
 
+#pong {
+    background-image: url("pong.png");
+    background-size: contain;
+}
+
 .box {
     transition: all .2s ease-in-out;
     display: block;
