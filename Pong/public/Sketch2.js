@@ -5,10 +5,6 @@ var rightScore = 0;
 let myFont;
 var firstRound = true;
 
-function preload() {
-    myFont = loadFont("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-}
-
 function setup() {
     var cnv = createCanvas(windowWidth,windowHeight);
     cnv.style('margin','0px');
@@ -17,7 +13,7 @@ function setup() {
     cnv.style('top','0');
     
     textAlign(CENTER, CENTER);
-    textFont(myFont);
+    textFont("Arial");
     textSize(75);
 
     leftPaddle = new paddle(true);
@@ -40,7 +36,6 @@ function draw()
     boundary();
     scoreCheck();
     stopDrainingMyBattery();
-    //console.log("Ball x is " + ball.x + " | Ball y is " + ball.y + " | Paddle x is " + leftPaddle.x + "| Paddle Y is " + leftPaddle.y);
 }
 
 function updateBoard() 
@@ -53,6 +48,31 @@ function updateBoard()
         {
             rect(windowWidth/2 - 3.5, currHeight, 12, 12);
         }
+
+        /* Draw keys in the corners */
+        let c = color('rgba(255, 255, 255, 0.15)');
+        stroke(c);
+        strokeWeight(4);
+        noFill();
+        
+        rect(10, windowHeight - 60, 50, 50, 5);
+        rect(10, windowHeight - 120, 50, 50, 5);
+
+        rect(windowWidth - 60, windowHeight - 60, 50, 50, 5);
+        rect(windowWidth - 60, windowHeight - 120, 50, 50, 5);
+
+        strokeWeight(0);
+
+        textSize(35);
+        fill('rgba(255, 255, 255, 0.50)');
+
+        text('S', 35, windowHeight - 35);
+        text('W', 35, windowHeight - 95);
+
+        triangle(windowWidth - 45, windowHeight - 45, windowWidth - 35, windowHeight - 25, windowWidth - 25, windowHeight - 45);
+        triangle(windowWidth - 45, windowHeight - 85, windowWidth - 25, windowHeight - 85, windowWidth - 35, windowHeight - 105);
+        
+        textSize(100);
     }
     
     fill(255);
