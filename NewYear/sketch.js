@@ -1,9 +1,9 @@
 var fireworks = [];
 var gravity;
 var fireworkProb;
-var yearCheck = 2019;
 var count = 0;
 var currDate = new Date;
+var yearCheck = currDate.getFullYear();
 
 function setup()
 {
@@ -27,7 +27,6 @@ function draw()
     if (currDate.getMonth() === 1 && count === 0)
     {
         ++count;
-        ++year;
     }
 
     if (currDate.getFullYear() != yearCheck)

@@ -1,4 +1,6 @@
-var newYearDate = new Date(2019, 0, 1, 0, 0, 0, 0);
+var currDate = new Date;
+var currYear = currDate.getFullYear();
+var newYearDate = new Date((currYear + 1), 0, 1, 0, 0, 0, 0);
 
 var newYear = false;
 function date_time(id)
@@ -10,8 +12,6 @@ function date_time(id)
     var month = date.getMonth();
     var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
     var d = date.getDate();
-    var day = date.getDay();
-    var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
     var h = date.getHours();
     if(h<10)
     {
