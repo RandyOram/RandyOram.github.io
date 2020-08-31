@@ -1,0 +1,61 @@
+<html>
+
+	<head>
+		<title>Random</title>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="random.css">
+		<link href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+
+	<body>
+        <div class="container">
+            <div class="row title-container">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    Random Number Generator
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row content-container">
+                <div class="col-4"></div>
+                <div class="col-4 input-output-container">
+                    <div class="form-group input">
+                        <label for="random-number">Upper Bound:</label>
+                        <input type="number" class="form-control" id="random-number" value="2">
+                    </div>
+                    <div class="form-group input">
+                        <label for="random-number">Time (seconds) between numbers:</label>
+                        <input type="number" class="form-control top-buffer" id="num-seconds" value="5">
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="btn btn-circle fa fa-play" data-toggle="tooltip" title="Play" data-placement="bottom" id="play-btn"></button>
+                        <button type="button" class="btn btn-circle fa fa-pause" data-toggle="tooltip" title="Stop" data-placement="bottom" id="stop-btn"></button>
+                    </div>
+                    <div class="output top-buffer" id="output-text">
+                        Press play!
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row buffer"></div>
+        </div>
+	</body>
+
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	<script src="random.js" type="text/javascript"></script>
+	<script>
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+			});
+	</script>
+	<script>
+		$('#Home-btn').click(function(){
+			window.location.href ='../index.html';
+		});		
+	</script>
+
+</html>
