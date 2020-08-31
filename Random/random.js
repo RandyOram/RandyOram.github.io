@@ -1,5 +1,6 @@
 var interval;
 var isRunning = false;
+var count = 0;
 
 $(document).ready(() => {
     $("#num-seconds").change(handleNumberChange)
@@ -8,9 +9,16 @@ $(document).ready(() => {
 })
 
 function changeValue() {
+    ++count;
     console.log($("#random-number").val());
     var number = Math.floor(Math.random() * ($("#random-number").val()) + 1);
-    $("#output-text").text(number)
+    $("#output-text").text(number);
+    if (count & 1) {
+        $("#output-text").css("color", "#8c34eb");
+    }
+    else {
+        $("#output-text").css("color", "#2aa0f5");
+    }
 }
 
 function startInterval() {
